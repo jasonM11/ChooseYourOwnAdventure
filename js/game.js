@@ -6,24 +6,39 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "you're going to a dead mans grave",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Enter the graveyard",
+                    nextLevel: "tombstone",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "Leave without a doubt",
+                    nextLevel: "startOver",
                 },
             ]
         },
 
-        cave: {
+        tombstone: {
             background_image: "fire.gif",
-            music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            music: "",
+            message: "choose your weapons",
+            choices: [
+                {
+                    text: "flashlight and Shovel",
+                    nextLevel:"underWorld",
+                },
+                
+                {
+                    text: "taxi card info and a phone",
+                    nextLevel:"home",
+                }
+            ]
+        },
+
+        startOver:{
+            message: "We saw potencial in you:(",
             choices: [
                 {
                     text: "Start over",
@@ -31,14 +46,27 @@ var game = {
                 },
             ]
         },
-
-        field: {
-            message: "Some adventurer you are...",
+        underWorld:{
+            message: "choose between mystical artifacts",
             choices: [
                 {
-                    text: "Start over",
+                    text: "eternal key ",
+                    nextLevel: "doorOfwisdom",
+                },
+                 {
+                    text: "magic elixir",
+                    nextLevel: "curse",
+                },
+        ]
+        },
+                home:{
+            message: "you're such a wimp and lost your pride",
+            choices: [
+                {
+                    text: "start over ",
                     nextLevel: "start",
                 },
+                 
             ]
         },
 
